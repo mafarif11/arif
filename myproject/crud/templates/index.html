@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body style="background-color:aliceblue;">
+    <center> <h1 style="margin-top: 100px;">CRUD REGISTRATION</h1></center>
+       <div class="container  border border-4 border border-dark rounded-4" style="width: 510px;margin-top:00px;">
+        <h2 class="mt-2 ps-4">Register form</h2>
+        <form action="all1" method="post" autocomplete="off" >
+            {% csrf_token %}
+          <div class="mb-3 mt-3">
+            <label for="name">Firstname:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter the Firstname" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="age">Lastname</label>
+            <input type="text" class="form-control" id="age" placeholder="Enter your Lastname" name="age" required>
+          </div>
+          <div class="mb-3">
+            <label for="">Email</label>
+            <input type="email" class="form-control" id="pwd" placeholder="Enter your email" name="city" required>
+          </div>
+          <a href="{% url 'bac' %}"><button type="button" class="btn btn-danger mb-3" style="width:49%;padding-left: 1PX;">BACK</button></a> <button type="submit" class="btn btn-primary mb-3" style="width:49%;">SUBMIT</button>
+        </form>
+      </div>
+    </div>   
+</body>
+</html>
